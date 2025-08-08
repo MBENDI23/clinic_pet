@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makindye Pet Clinic - Complete Pet Care Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;       /* Vibrant blue */
+            --primary-light: #4895ef; /* Lighter blue */
+            --secondary: #3a0ca3;     /* Deep purple */
+            --accent: #f72585;        /* Pink accent */
+            --light: #f8f9fe;         /* Off-white background */
+            --dark: #2b2d42;          /* Dark text */
+            --success: #4cc9a0;       /* Green */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .hero-btn {
+            background: var(--accent);
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(247, 37, 133, 0.4);
+        }
+        
+        /* Features */
+        .feature-card {
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: none;
+            background: white;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Stats */
+        .stats {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 0;
+                text-align: center;
+            }
+            
+            .hero-img {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-paw me-2"></i>Makindye Pet Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="login.php">Client Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Complete Care for Your Beloved Pets</h1>
+                    <p class="lead mb-4">Our state-of-the-art management system ensures your pets get the best care with seamless appointment scheduling, medical records, and billing.</p>
+                    <div class="d-flex gap-3">
+                        <a href="register.php" class="btn btn-light btn-lg px-4">Register Now</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img">
+                    <img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Happy dog" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Choose Our System</h2>
+                <p class="text-muted">Streamlined solutions for modern pet care</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Easy Appointments</h4>
+                        <p class="text-muted text-center">Book, reschedule or cancel appointments in seconds with our intuitive interface.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Transparent Billing</h4>
+                        <p class="text-muted text-center">View invoices, make payments, and track your pet's treatment costs all in one place.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Health Records</h4>
+                        <p class="text-muted text-center">Access complete medical history, vaccination records, and treatment plans anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Chart.js -->
+    <section id="stats" class="stats py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Our Impact in Numbers</h2>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="stat-number">1,200+</div>
+                            <p>Happy Pets</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number">98%</div>
+                            <p>Client Satisfaction</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-number">24/7</div>
+                            <p>Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <canvas id="appointmentsChart" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Clients Say</h2>
+                <p class="text-muted">Trusted by pet owners across Uganda</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" 
+                                 alt="User" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="mb-0">Sarah K.</h5>
+                                <small class="text-muted">Dog Owner</small>
+                            </div>
+                        </div>
+                        <p>"The online appointment system saved me hours of waiting. My golden retriever Max gets better care now!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                                 alt="User" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="mb-0">James M.</h5>
+                                <small class="text-muted">Cat Owner</small>
+                            </div>
+                        </div>
+                        <p>"I can track all of Whiskers' vaccinations and treatments through the portal. So convenient!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" 
+                                 alt="User" class="rounded-circle me-3" width="50">
+                            <div>
+                                <h5 class="mb-0">Amina N.</h5>
+                                <small class="text-muted">Bird Owner</small>
+                            </div>
+                        </div>
+                        <p>"The billing system is transparent and the mobile payments make everything so easy!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Ready to Transform Your Pet's Care Experience?</h2>
+            <p class="lead mb-4">Join hundreds of pet owners who trust our system for their pet care needs</p>
+            <a href="register.php" class="btn btn-light btn-lg px-5">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4"><i class="fas fa-paw me-2"></i>Makindye Pet Clinic</h5>
+                    <p>Providing cutting-edge pet care management solutions since 2015.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="#features" class="footer-link">Features</a></li>
+                        <li class="mb-2"><a href="#stats" class="footer-link">Statistics</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="footer-link">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Appointments</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Medical Records</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Billing</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Emergency Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4" id="contact">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Pet Street, Kampala</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +256 712 345 678</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@makindyepet.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Makindye Pet Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Initialize Chart.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('appointmentsChart').getContext('2d');
+            
+            const appointmentsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Monthly Appointments',
+                        data: [120, 190, 170, 220, 240, 195],
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0.7)',
+                            'rgba(255, 255, 255, 0.7)',
+                            'rgba(255, 255, 255, 0.7)',
+                            'rgba(255, 255, 255, 0.7)',
+                            'rgba(255, 255, 255, 0.7)',
+                            'rgba(255, 255, 255, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)',
+                            'rgba(255, 255, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
